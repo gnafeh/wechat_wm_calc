@@ -1,0 +1,111 @@
+<!--pages/calc/calc.wxml-->
+<view class="calc_bg">
+<view class="title_input_style">
+  <view class="section__title">总共几个人:</view>
+   <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" >
+     <view class="picker" >
+        {{array[index]}}
+     </view>
+    </picker>
+</view>
+
+<view class="add-page">
+
+<view class="title_input_style_right">
+    <text class='section__title'>包装费:</text>
+    <input class='section_inputfield' focus='false' placeholder='输入包装费' type='digit' bindinput='bindKeyInputPack' value='{{inputValuePack}}'></input>
+    <!--<icon class = "margin" type="clear" /> -->
+</view>
+
+<view class="title_input_style_right">
+    <text class='section__title'>运送费:</text>
+    <input class='section_inputfield' focus='true' placeholder='输入运送费' type='digit' background-style="color:red" bindinput='bindKeyInputDelivery' value='{{inputValueDelivery}}'></input>
+</view>
+
+<view class="title_input_style_right">
+    <text class='section__title'>减免费:</text>
+    <input class='section_inputfield' placeholder='输入减免费' type='digit' bindinput='bindKeyInputCutoff' value='{{inputValueCutoff}}'></input>
+</view>
+
+
+<!--
+<view> 你选择了 {{array[index]}} 个人! </view>
+<view> 包装费: {{inputValuePack}} </view>
+<view> 运送费: {{inputValueDelivery}} </view>
+<view> 减免费: {{inputValueCutoff}} </view>
+-->
+
+<view class="title_input_style_right  {{reply01?'on':'off'}}">
+    <text class='section__title'>第一位点了:</text>
+<input class='section_inputfield' name="people01" placeholder='01请输入个人所选价格' type='digit' bindinput='bindKeyInputPeople01' value='{{inputValuePeople01}}'></input>
+</view>
+
+<view class="title_input_style_right  {{reply02?'on':'off'}}">
+    <text class='section__title'>第二位点了:</text>
+<input class='section_inputfield' name="people02" placeholder='02请输入个人所选价格' type='digit' bindinput='bindKeyInputPeople02' value='{{inputValuePeople02}}'></input>
+</view>
+<view class="title_input_style_right {{reply03?'on':'off'}}">
+  <text class='section__title'>第三位点了:</text>
+<input class='section_inputfield' name="people03" placeholder='03请输入个人所选价格' type='digit' bindinput='bindKeyInputPeople03' value='{{inputValuePeople03}}'></input>
+</view>
+<view class="title_input_style_right {{reply04?'on':'off'}}">
+  <text class='section__title'>第四位点了:</text>
+<input class='section_inputfield' name="people04" placeholder='04请输入个人所选价格' type='digit' bindinput='bindKeyInputPeople04' value='{{inputValuePeople04}}'></input>
+</view>
+<view class="title_input_style_right {{reply05?'on':'off'}}">
+  <text class='section__title'>第五位点了:</text>
+  <input class='section_inputfield' name="people05" placeholder='05请输入个人所选价格' type='digit' bindinput='bindKeyInputPeople05' value='{{inputValuePeople05}}'></input>
+</view>
+<view class="title_input_style_right {{reply06?'on':'off'}}">
+  <text class='section__title'>第六位点了:</text>
+<input class='section_inputfield' name="people06" placeholder='06请输入个人所选价格' type='digit' bindinput='bindKeyInputPeople06' value='{{inputValuePeople06}}'></input>
+</view>
+<view class="title_input_style_right {{reply07?'on':'off'}}">
+  <text class='section__title'>第七位点了:</text>
+<input class='section_inputfield' name="people07" placeholder='07请输入个人所选价格' type='digit' bindinput='bindKeyInputPeople07' value='{{inputValuePeople07}}'></input>
+</view>
+<view class="title_input_style_right {{reply08?'on':'off'}}">
+  <text class='section__title'>第八位点了:</text>
+<input class='section_inputfield' name="people08" placeholder='08请输入个人所选价格' type='digit' bindinput='bindKeyInputPeople08' value='{{inputValuePeople08}}'></input>
+</view>
+<view class="title_input_style_right {{reply09?'on':'off'}}">
+  <text class='section__title'>第9位点了:</text>
+<input class='section_inputfield' name="people09" placeholder='09请输入个人所选价格' type='digit' bindinput='bindKeyInputPeople09' value='{{inputValuePeople09}}'></input>
+</view>
+
+
+</view>
+
+<button type='primary' class='button_hover' disabled="{{btn_disabled}}" bindtap='calcbtn'>计算</button>
+
+
+
+<view class="section_result {{calcreply01?'on':'off'}}">
+    <text class='section'>第一位应该支付:{{inputValuePay01}} 元!</text>
+</view>
+<view class="section_result {{calcreply02?'on':'off'}}">
+    <text class='section'>第二位应该支付:{{inputValuePay02}} 元!</text>
+</view>
+<view class="section_result {{calcreply03?'on':'off'}}">
+    <text class='section'>第三位应该支付:{{inputValuePay03}} 元!</text>
+</view>
+<view class="section_result {{calcreply04?'on':'off'}}">
+    <text class='section'>第四位应该支付:{{inputValuePay04}} 元!</text>
+</view>
+<view class="section_result {{calcreply05?'on':'off'}}">
+    <text class='section'>第五位应该支付:{{inputValuePay05}} 元!</text>
+</view>
+<view class="section_result {{calcreply06?'on':'off'}}">
+    <text class='section'>第六位应该支付:{{inputValuePay06}} 元!</text>
+</view>
+<view class="section_result {{calcreply07?'on':'off'}}">
+    <text class='section'>第七位应该支付:{{inputValuePay07}} 元!</text>
+</view>
+<view class="section_result {{calcreply08?'on':'off'}}">
+    <text class='section'>第八位应该支付:{{inputValuePay08}} 元!</text>
+</view>
+<view class="section_result {{calcreply09?'on':'off'}}">
+    <text class='section'>第九位应该支付:{{inputValuePay09}} 元!</text>
+</view>
+
+</view>

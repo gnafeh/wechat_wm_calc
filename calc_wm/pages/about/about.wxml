@@ -1,0 +1,34 @@
+<!--about.wxml-->
+<view class="about_bg">
+  <view class="about_text_style">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="title_text">nnzbyyxngm</text>
+      <text class="description_text">此应用源于人脑的退化</text>
+  
+   <view class="version_text_style">
+     <text class="version_text">V004</text>
+   </view>
+  </view>
+
+   <view class="history_title_text_style">
+     <text class="history_title_text">版本历史</text>
+   </view>
+  
+   <view class="history_title_text_style_tab">
+     <text class="history_title_text_style_v004_tab01">V004</text>
+     <text class="history_title_text_style_v004_tab02">2018-02-27</text>
+   </view>
+   <text class="history_title_text_style_content"> - 解决包装费等没有平摊的bug(v003没有上传成功)\n - 界面优化\n - 添加关于界面,用于查看当前版本</text>
+
+   <view class="history_title_text_style_tab">
+     <text class="history_title_text_style_v003_tab01">V003</text>
+     <text class="history_title_text_style_v003_tab02">2018-02-08</text>
+   </view>
+   <text class="history_title_text_style_content"> - 解决包装费等没有平摊的bug</text>
+
+   <view class="history_title_text_style_tab">
+      <text class="history_title_text_style_v002_tab01">V002</text>
+      <text class="history_title_text_style_v002_tab02">2018-01-26</text>
+    </view>
+    <text class="history_title_text_style_content"> - 解决无法输入小数点的问题</text>   
+</view>
